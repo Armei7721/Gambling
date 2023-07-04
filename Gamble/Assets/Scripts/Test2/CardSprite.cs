@@ -10,11 +10,11 @@ public class CardSprite : MonoBehaviour
     public Sprite cardBack;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         ShuffleSprites();
-        DrawCard();
+      
     }
 
     // Update is called once per frame
@@ -36,9 +36,18 @@ public class CardSprite : MonoBehaviour
 
     public Sprite DrawCard()
     {
-        Sprite drawnCard = faces[0];
-        faces.RemoveAt(0);
-        return drawnCard;
+        Sprite drawnCard = null;
 
+        for (int i = 0; i < faces.Count; i++)
+        {
+            if (faces[i] != null)
+            {
+                drawnCard = faces[i];
+                faces.RemoveAt(i);
+                break;
+            }
+        }
+
+        return drawnCard;
     }
 }
