@@ -345,9 +345,8 @@ GameObject:
   - component: {fileID: 270240940}
   - component: {fileID: 270240939}
   - component: {fileID: 270240938}
-  - component: {fileID: 270240941}
-  - component: {fileID: 270240942}
   - component: {fileID: 270240943}
+  - component: {fileID: 270240942}
   m_Layer: 0
   m_Name: CardDeck
   m_TagString: Untagged
@@ -367,10 +366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d27eed7c1037394ea349cbf7cf4caf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardBack: {fileID: 21300000, guid: 31f30445e220d6442a65a52ae289545c, type: 3}
-  test2: {fileID: 8030661159170019698, guid: 9223801d904c6c1408fc295d398ba4dc, type: 3}
+  test2: {fileID: 2668258930577223395, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
   test3: {fileID: 0}
-  card: {fileID: 0}
 --- !u!114 &270240939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,8 +431,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   show: {fileID: 0}
-  test: {fileID: 0}
-  test2: {fileID: 0}
   deckNum: 0
 --- !u!4 &270240940
 Transform:
@@ -452,18 +447,6 @@ Transform:
   m_Father: {fileID: 733143294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &270240941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270240935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db050676c6f502a4c9582a88b47deba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &270240942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1633,60 +1616,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058230673}
   m_CullTransparentMesh: 1
---- !u!1001 &7478231684556435811
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.230212
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.04009208
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2579877685915126640, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2668258930577223395, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}
-      propertyPath: m_Name
-      value: Card2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 085d99fe2e97fb848b332fd6e6d0a5a9, type: 3}

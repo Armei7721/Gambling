@@ -7,20 +7,21 @@ public class Test : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     
-    public Sprite cardBack;
+    
     private int cardIndex;
     public GameObject test2;
     public GameObject test3;
     //public GameObject test5;
     Test test;
     int cardCount = 0;
-    public CardSprite card;
+    private CardSprite card;
     
     Dictionary<string, CardDictionary> cities = new Dictionary<string, CardDictionary>();
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         cardIndex = Random.Range(0, 39);
+        Clone();
     }
     // Update is called once per frame
     void Update()
@@ -32,36 +33,22 @@ public class Test : MonoBehaviour
         if (cardCount < 1)
         {
             // 왼쪽에 카드 복제
-            test3 = Instantiate(test2, transform.position - new Vector3(2f, 0f, 0f), Quaternion.identity);
-
+            test3 = Instantiate(test2, transform.position - new Vector3(2f, 4f, 0f), Quaternion.identity);
+            test3.AddComponent<CardSprite>();
             CardSprite cloneCardSpriteScript = test3.GetComponent<CardSprite>();
 
             if (cloneCardSpriteScript != null)
             {
-                cloneCardSpriteScript.faces = card.faces;
-                int randomIndex = Random.Range(0, cloneCardSpriteScript.faces.Length);
-                cloneCardSpriteScript.GetComponent<SpriteRenderer>().sprite = cloneCardSpriteScript.faces[randomIndex];
+                // 뽑힌 카드 가져오기
+                Sprite drawnCard = cloneCardSpriteScript.DrawCard();
+                Debug.Log("발동");
+                // 복제된 카드의 SpriteRenderer에 뽑힌 카드를 표시
+                cloneCardSpriteScript.GetComponent<SpriteRenderer>().sprite = drawnCard;
             }
 
             cardCount++;
             Debug.Log(cardCount);
         }
-        //else if (cardCount >= 1)
-        //{
-        //    spriteRenderer.sprite = card.faces[cardIndex];
-        //    // 오른쪽에 카드 복제
-        //    GameObject test4 = Instantiate(test5, transform.position + new Vector3(2f, 0f, 0f), Quaternion.identity);
-
-        //    CardSprite cloneCardSpriteScript = test4.GetComponent<CardSprite>();
-
-        //    if (cloneCardSpriteScript != null)
-        //    {
-        //        cloneCardSpriteScript.faces = card.faces;
-        //        int randomIndex = Random.Range(0, cloneCardSpriteScript.faces.Length);
-        //        cloneCardSpriteScript.GetComponent<SpriteRenderer>().sprite = cloneCardSpriteScript.faces[randomIndex];
-        //    }
-        //}
     }
-
 
 }

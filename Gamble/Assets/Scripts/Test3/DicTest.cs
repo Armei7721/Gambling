@@ -16,9 +16,6 @@ public class DicTest : MonoBehaviour
     public Sprite[] tenmonth;
     public SpriteRenderer show;
 
-    public GameObject test;
-    public GameObject test2;
-
     private CardSprite card;
     public int deckNum;
     Dictionary<string, CardDictionary> cities = new Dictionary<string, CardDictionary>();
@@ -29,10 +26,12 @@ public class DicTest : MonoBehaviour
         show = GetComponent<SpriteRenderer>();
         card = GetComponent<CardSprite>();
         //card = FindObjectOfType<CardSprite>();
+
+        Assignment();
     }
     private void OnEnable()
     {
-        Assignment();
+     //   Assignment();
     }
     private void Start()
     {
@@ -50,22 +49,11 @@ public class DicTest : MonoBehaviour
         // Add card information for other months
         
         // Additional assignments if necessary for isSpecial field, etc.
-        Show();
+
       
         
     }
-    void Show()
-    {   
-        for (int i = 0; i < onemonth.Length; i++)
-        {
-            show.sprite = card.faces[i];
-        }
-    }
-    void Clone()
-    {
-        test2 = Instantiate(test, transform.position, Quaternion.identity);
-        CardSprite cloneCardSprite = test2.GetComponent<CardSprite>();
-    }
+
     void Assignment()
     {
         for (int i = 0; i < onemonth.Length; i++)
