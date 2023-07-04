@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DicTest : MonoBehaviour
 {
-    public Sprite[] months;
     public Sprite[] onemonth;
     public Sprite[] twomonth;
     public Sprite[] threemonth;
@@ -16,15 +15,24 @@ public class DicTest : MonoBehaviour
     public Sprite[] ninemonth;
     public Sprite[] tenmonth;
     public SpriteRenderer show;
-   
+
+    public GameObject test;
+    public GameObject test2;
+
     private CardSprite card;
     public int deckNum;
     Dictionary<string, CardDictionary> cities = new Dictionary<string, CardDictionary>();
 
     private void Awake()
     {
-        card = GetComponent<CardSprite>();
         
+        show = GetComponent<SpriteRenderer>();
+        card = GetComponent<CardSprite>();
+        //card = FindObjectOfType<CardSprite>();
+    }
+    private void OnEnable()
+    {
+        Assignment();
     }
     private void Start()
     {
@@ -40,29 +48,39 @@ public class DicTest : MonoBehaviour
         cities.Add("9월", new CardDictionary("9월", 9, false, ninemonth));
         cities.Add("10월", new CardDictionary("10월", 10, false, tenmonth));
         // Add card information for other months
-        Assignment();
+        
         // Additional assignments if necessary for isSpecial field, etc.
         Show();
+      
+        
     }
     void Show()
-    {
-        show.sprite = card.faces[1];
+    {   
+        for (int i = 0; i < onemonth.Length; i++)
+        {
+            show.sprite = card.faces[i];
+        }
     }
-  
+    void Clone()
+    {
+        test2 = Instantiate(test, transform.position, Quaternion.identity);
+        CardSprite cloneCardSprite = test2.GetComponent<CardSprite>();
+    }
     void Assignment()
     {
         for (int i = 0; i < onemonth.Length; i++)
         {
             onemonth[i] = card.faces[i];
-            twomonth[i] = card.faces[i + 4];
-            threemonth[i] = card.faces[i + 8];
-            fourmonth[i] = card.faces[i + 12];
-            fivemonth[i] = card.faces[i + 16];
-            sixmonth[i] = card.faces[i + 20];
-            sevenmonth[i] = card.faces[i + 24];
-            eightmonth[i] = card.faces[i + 28];
-            ninemonth[i] = card.faces[i + 32];
-            tenmonth[i] = card.faces[i + 36];
+            twomonth[i] = card.faces[i + onemonth.Length];
+            threemonth[i] = card.faces[i + 2 * onemonth.Length];
+            fourmonth[i] = card.faces[i + 3 * onemonth.Length];
+            fivemonth[i] = card.faces[i + 4 * onemonth.Length];
+            sixmonth[i] = card.faces[i + 5 * onemonth.Length];
+            sevenmonth[i] = card.faces[i + 6 * onemonth.Length];
+            eightmonth[i] = card.faces[i + 7 * onemonth.Length];
+            ninemonth[i] = card.faces[i + 8 * onemonth.Length];
+            tenmonth[i] = card.faces[i + 9 * onemonth.Length];
         }
     }
+
 }

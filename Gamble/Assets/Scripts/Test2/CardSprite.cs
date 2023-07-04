@@ -5,20 +5,16 @@ using UnityEngine;
 
 public class CardSprite : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
+    SpriteRenderer sprite;
     
     public Sprite[] faces;
     public Sprite cardBack;
-    public int cardIndex;
-    public GameObject test2;
-    public GameObject test3;
-    public GameObject test5;
-    Test test;
-    int cardCount = 0;
+    private int cardIndex;
+
     // Start is called before the first frame update
-    void start()
+    void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<SpriteRenderer>();
         cardIndex = Random.Range(0, faces.Length);
         ShuffleSprites();
     }
@@ -28,8 +24,8 @@ public class CardSprite : MonoBehaviour
     {
         
     }
-
-    void ShuffleSprites()
+  
+    public void ShuffleSprites()
     {
         for (int i = 0; i < faces.Length - 1; i++)
         {
@@ -40,16 +36,16 @@ public class CardSprite : MonoBehaviour
             
         }
     }
-    public void ToggleFace(bool showFace)
-    {
-        if (showFace)
-        {
-            spriteRenderer.sprite = faces[cardIndex];
-        }
-        else
-        {
-            spriteRenderer.sprite = cardBack;
-        }
-    }
+    //public void ToggleFace(bool showFace)
+    //{
+    //    if (showFace)
+    //    {
+    //        sprite.sprite = faces[cardIndex];
+    //    }
+    //    else
+    //    {
+    //        sprite.sprite = cardBack;
+    //    }
+    //}
 
 }

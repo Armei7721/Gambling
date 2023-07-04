@@ -18,20 +18,14 @@ public class DivCard : MonoBehaviour
 
     }
 
-   
-            
-        
     
     //public void Show()
     //{
     //    showCard = Instantiate(BlankCard, transform.position, Quaternion.identity);
     //    showCard.AddComponent<DicTest>();
-    //    showCard.GetComponent<DicTest>().month = cardsprite.faces[0].month;
-        
-    //        sprite = card.faces[0];
-         
-    //    renderer.sprite = sprite;
-       
+    //    showCard.GetComponent<DicTest>().month = cardsprite.faces[0].month;       
+    //        sprite = card.faces[0];         
+    //    renderer.sprite = sprite;     
     //}
 
     public void  rand()
