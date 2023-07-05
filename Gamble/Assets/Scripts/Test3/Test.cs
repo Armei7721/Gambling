@@ -19,7 +19,7 @@ public class Test : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         cardIndex = Random.Range(0, 39);
-        card = test2.GetComponent<CardSprite>();
+        card = test3.GetComponent<CardSprite>();
 
         if (card != null)
         {
@@ -27,7 +27,7 @@ public class Test : MonoBehaviour
         }
         else
         {
-            Debug.LogError("CardSprite component not found on test2 object.");
+            //Debug.LogError("CardSprite component not found on test2 object.");
         }
     }
 
