@@ -7,12 +7,16 @@ public class CardSprite : MonoBehaviour
     public List<Sprite> faces;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        ShuffleSprites();
+    }
     public void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         if (sprite != null)
         {
-            ShuffleSprites();
+            //ShuffleSprites();
         }
     }
 
@@ -21,6 +25,7 @@ public class CardSprite : MonoBehaviour
     {
 
     }
+
     public void ShuffleSprites()
     {
         for (int i = 0; i < faces.Count - 1; i++)

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2579877685915126640}
   - component: {fileID: 3533527310208571946}
-  - component: {fileID: 3210844702979144266}
   m_Layer: 0
   m_Name: Card2
   m_TagString: Untagged
@@ -85,17 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3210844702979144266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2668258930577223395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de6d6bdd01ecce047b9d526c2e01bbd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  faces: []
-  cardBack: {fileID: 0}
