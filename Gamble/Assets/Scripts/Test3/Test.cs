@@ -37,7 +37,7 @@ public class Test : MonoBehaviour
             test3 = Instantiate(test2, transform.position - new Vector3(2f, 4f, 0f), Quaternion.identity);
 
             // 복제된 오브젝트에 CardSprite 컴포넌트 추가
-            CardSprite cloneCardSpriteScript = test2.AddComponent<CardSprite>();
+            CardSprite cloneCardSpriteScript = test3.AddComponent<CardSprite>();
 
             if (cloneCardSpriteScript != null)
             {
