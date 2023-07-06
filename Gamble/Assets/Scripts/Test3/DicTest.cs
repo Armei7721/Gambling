@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class DicTest : MonoBehaviour
 {
@@ -22,20 +23,16 @@ public class DicTest : MonoBehaviour
 
     private void Awake()
     {
-        
         show = GetComponent<SpriteRenderer>();
         card = GetComponent<CardSprite>();
-        //card = FindObjectOfType<CardSprite>();
 
         Assignment();
     }
-    private void OnEnable()
-    {
-     //   Assignment();
-    }
+
     private void Start()
     {
         card = FindObjectOfType<CardSprite>();
+
         cities.Add("1월", new CardDictionary("1월", 1, false, onemonth));
         cities.Add("2월", new CardDictionary("2월", 2, false, twomonth));
         cities.Add("3월", new CardDictionary("3월", 3, false, threemonth));
@@ -46,12 +43,8 @@ public class DicTest : MonoBehaviour
         cities.Add("8월", new CardDictionary("8월", 8, false, eightmonth));
         cities.Add("9월", new CardDictionary("9월", 9, false, ninemonth));
         cities.Add("10월", new CardDictionary("10월", 10, false, tenmonth));
-        // Add card information for other months
-        
-        // Additional assignments if necessary for isSpecial field, etc.
 
-      
-        
+        ExtractKeysFromCardDictionaries();
     }
 
     void Assignment()
@@ -71,4 +64,12 @@ public class DicTest : MonoBehaviour
         }
     }
 
+    void ExtractKeysFromCardDictionaries()
+    {
+        List<string> keys = cities.Keys.ToList();
+        foreach (string key in keys)
+        {
+            Debug.Log("Key: " + key);
+        }
+    }
 }
